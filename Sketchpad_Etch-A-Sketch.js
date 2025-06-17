@@ -3,7 +3,7 @@ const button = document.querySelector('button');
 createGrid();
 
 function createGrid(squaresBySide = 16){
-    let removeDivs = document.querySelectorAll('.innerDiv');
+    const removeDivs = document.querySelectorAll('.innerDiv');
     removeDivs.forEach(item => {
         item.remove();
     });
