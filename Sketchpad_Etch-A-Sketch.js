@@ -12,7 +12,7 @@ function createGrid(squaresBySide = 16){
             let div = document.createElement('div');
             div.classList.add('innerDiv');
             div.addEventListener('mouseover', event => {
-                event.target.classList.add('trail');
+                div.style.backgroundColor = randomColor();
             });
             container.appendChild(div);
         }
@@ -23,3 +23,11 @@ button.addEventListener('click', event => {
     let result = prompt('ENTER NUMBER OF SQUARES BY SIDE');
     createGrid(parseInt(result));
 });
+
+function randomColor(){
+    return `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
+}
+
+function randomValue(){
+    return Math.random()*1000 > 250 ? (Math.random()*1000)/10 : Math.random()*1000;
+}

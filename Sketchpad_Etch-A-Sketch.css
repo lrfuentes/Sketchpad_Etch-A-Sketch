@@ -9,12 +9,6 @@
     padding: 8px 0;
     margin: 1px;
 }
-
-#container div.trail{
-    background-color: blueviolet;
-    border: 1px solid red;
-}
-
 button {
     margin: 5px;
     float: right;
