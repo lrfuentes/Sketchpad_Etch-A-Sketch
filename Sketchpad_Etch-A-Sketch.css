@@ -10,7 +10,7 @@
     margin: 1px;
 }
 
-#container div:hover{
+#container div.trail{
     background-color: blueviolet;
-    border: 2px solid red;
+    border: 1px solid red;
 }
