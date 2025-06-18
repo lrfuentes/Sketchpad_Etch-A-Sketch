@@ -11,8 +11,10 @@ function createGrid(squaresBySide = 16){
         for (let j = 0; j < squaresBySide; j++) {
             let div = document.createElement('div');
             div.classList.add('innerDiv');
+            div.style.opacity = 0.1;
             div.addEventListener('mouseover', event => {
                 div.style.backgroundColor = randomColor();
+                div.style.opacity = changeOpacity(parseFloat(div.style.opacity));
             });
             container.appendChild(div);
         }
@@ -30,4 +32,8 @@ function randomColor(){
 
 function randomValue(){
     return Math.random()*1000 > 250 ? (Math.random()*1000)/10 : Math.random()*1000;
+}
+
+function changeOpacity(element){
+    return element < 1 ? element += 0.1 : 1;
 }
